@@ -1,0 +1,2 @@
+aws-sdk-java-archetype
+======================
