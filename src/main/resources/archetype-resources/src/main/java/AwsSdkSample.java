@@ -43,7 +43,7 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
  * shows how to make a few simple requests to Amazon EC2 and Amazon S3.
  *
  * Before you run this code, be sure to fill in your AWS security credentials
- * in the src/main/resources/AwsCredentials.properties file in this project.
+ * in the  .aws/credentials file under your home directory.
  *
  * If you don't have an Amazon Web Services account, you can get started for free:
  *   http://aws.amazon.com/free
@@ -60,8 +60,8 @@ public class AwsSdkSample {
 
     /*
      * Important: Be sure to fill in your AWS access credentials in the
-     *            AwsCredentials.properties file in this project before
-     *            you run this sample.
+     *            .aws/credentials file under your home directory 
+     *             before you run this sample.
      * http://aws.amazon.com/security-credentials
      */
     static AmazonEC2 ec2;
@@ -85,12 +85,12 @@ public class AwsSdkSample {
          * ProfileCredentialsProvider loads AWS security credentials from a
          * .aws/config file in your home directory.
          *
-         * These same credentials are used when working with the AWS CLI.
+         * These same credentials are used when working with other AWS SDKs and the AWS CLI.
          *
          * You can find more information on the AWS profiles config file here:
          * http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
          */
-        File configFile = new File(System.getProperty("user.home"), ".aws/config");
+        File configFile = new File(System.getProperty("user.home"), ".aws/credentials");
         AWSCredentialsProvider credentialsProvider = new ProfileCredentialsProvider(
             new ProfilesConfigFile(configFile), "default");
 

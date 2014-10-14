@@ -23,7 +23,7 @@ Define value for property 'package':  com.foo: :
 
 When the <code>archetype:generate</code> goal completes, you'll have a new Maven Java project, already configured with a dependency on the AWS SDK for Java and some sample code in the project to help you get started with the SDK.
 
-Before you run the sample code, you'll need to fill in your AWS security credentials.  This sample loads your credentials from the same place as the <a href="http://aws.amazon.com/cli/">AWS CLI</a> <i>(~/.aws/config)</i>.  If you've already set up your AWS security credentials with the AWS CLI, then you're ready to run the sample.  If you haven't set up your <code>~/.aws/config</code> file yet, here's what you should start with:
+Before you run the sample code, you'll need to fill in your AWS security credentials.  This sample loads your credentials from the default credentials profiles file <i>(~/.aws/credentials)</i>.  If you've already set up your profile credentials file, then you're ready to run the sample.  If you haven't set up your <code>~/.aws/credentials</code> file yet, here's what you should start with:
 <pre>
 [default]
 aws_access_key_id     = <your AWS access key>
